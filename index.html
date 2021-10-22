@@ -9,17 +9,17 @@
       <nav class="main-navigation">
         <ul class="main-menu">
           <li class="main-menu-item">
-            <a class="main-menu-limk" href="index.html">Главная</a>
+            <a class="main-menu-link" href="index.html">Главная</a>
           </li>
           <li class="main-menu-item">
-            <a class="main-menu-limk" href="#">О Седоне</a>
+            <a class="main-menu-link" href="#">О Седоне</a>
           </li>
           <li class="main-menu-item">
-            <a class="main-menu-limk" href="catalog.html">Гостиницы</a>
+            <a class="main-menu-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
-      <a class="logo" href="https://htmlacademy.ru/">
+      <a class="logo" href="index.html">
         <img class="logo-pic" src="#" alt="Логотип города Седона">
       </a>
       <ul class="user-controls">
@@ -32,36 +32,39 @@
         <li class="user-controls-item">
           <a class="favorite-control" href="#">
             <span class="visually-hidden">Избранное</span>
-            <span class="favorite-control-counter"></span>
+            <span class="favorite-control-counter">12</span>
             <svg class="favorite-control-icon"></svg>
           </a>
+          <div class="favorite-window">
+            <ul class="favorite-list">
+              <li class="favorite-item">
+                <img class="favorite-item-pic" src="#" alt="Мотель">
+                <div class="favorite-item-content">
+                  <p class="favorite-item-title">Desert Quail Inn</p>
+                  <span class="favorite-item-type">Мотель</span>
+                </div>
+                <button class="favorite-item-remove"></button>
+              </li>
+              <li class="favorite-item">
+                <img class="favorite-item-pic" src="#" alt="Апартаменты">
+                <div class="favorite-item-content">
+                  <p class="favorite-item-title">Villas at Poco Diablo</p>
+                  <span class="favorite-item-type">Апартаменты</span>
+                </div>
+                <button class="favorite-item-remove"></button>
+              </li>
+            </ul>
+            <a class="favorite-all" href="#">Все избранные</a>
+          </div>
+        </li>
+        <li class="desire-button">
+          <a class="button" href="catalog.html">Хочу сюда!</a>
         </li>
       </ul>
-      <div class="favorite-window">
-        <ul class="favorite-list">
-          <li class="favorite-item">
-            <img class="favorite-item-pic" src="#" alt="#">
-            <div class="favorite-item-content">
-              <p class="favorite-item-title"></p>
-              <span class="favorite-item-type"></span>
-            </div>
-            <button class="favorite-item-remove"></button>
-          </li>
-          <li class="favorite-item">
-            <img class="favorite-item-pic" src="#" alt="#">
-            <div class="favorite-item-content">
-              <p class="favorite-item-title"></p>
-              <span class="favorite-item-type"></span>
-            </div>
-            <button class="favorite-item-remove"></button>
-          </li>
-        </ul>
-        <a class="favorite-all" href="#"></a>
-      </div>
     </header>
     <main class="site-main">
       <section class="welcome">
-        <h1 class="visuali-hidden">Город Седона</h1>
+        <h1 class="visually-hidden">Город Седона</h1>
         <img class="welcome-text" src="#" alt="Добро пожаловать в Седону">
       </section>
       <section class="about">
@@ -74,7 +77,7 @@
               <p>— №1 —</p>
               <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="reasons-pic" src="#" alt="#">
+            <img class="reasons-pic" src="#" alt="Настоящий городок">
             <ul class="advantages">
               <li class="advantages-item">
                 <svg class="advantages-icon"></svg>
@@ -99,7 +102,7 @@
               <p>— №2 —</p>
               <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
-            <img class="reasons-pic" src="#" alt="#">
+            <img class="reasons-pic" src="#" alt="Мост дьявола">
           </li>
           <li class="reasons-item">
             <div class="reasons-content">
@@ -124,10 +127,62 @@
           </li>
         </ol>
       </section>
-      <section class="intrested">
-        <h2 class="intrested-title section-title">Заинтересовались?</h2>
-        <p class="intrested-desription section-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="button intrested-button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+      <section class="interested">
+        <h2 class="interested-title section-title">Заинтересовались?</h2>
+        <p class="interested-description section-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="button interested-button" href="catalog.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+        <div class="modal-window-wrapper">
+          <h4 class="modal-window-tile section-tile">Поиск гостиницы в Седоне</h4>
+          <button class="modal-window-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+            <svg class="modal-window-close-icon"></svg>
+          </button>
+          <div class="modal-window">
+            <form class="search" method="get" action="https://echo.htmlacademy.ru">
+              <div class="arrival-date">
+                <label for="arrival-date-input">Дата заезда:</label>
+                <input class="arrival-date-input" id="arrival-date-input" type="text" name="arrival-date" placeholder="27 апреля 2020">
+                <button class="calendar" type="button">
+                  <span class="visually-hidden">Открыть календарь</span>
+                  <svg></svg>
+                </button>
+                <p class="arrival-date-hint">Мы не можем отправить вас в прошлое.</p>
+              </div>
+              <div class="departure-date">
+                <label for="departure-date-input">Дата выезда:</label>
+                <input class="departure-date-input" id="departure-date-input" type="text" name="departure-date" placeholder="1 сентября 2021">
+                <button class="calendar" type="button">
+                  <span class="visually-hidden">Открыть календарь</span>
+                  <svg></svg>
+                </button>
+                <p class="departure-date-hint">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+              <div class="guest-number">
+                <div class="guest-number-wrapper">
+                  <label for="adults-number">Взрослые:</label>
+                  <button class="guests-number-controls decrease" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <input class="adults-number" id="adults-number" type="text" name="adults-number" placeholder="2">
+                  <button class="guests-number-controls increase" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
+                </div>
+                <div class="guest-number-wrapper">
+                  <label for="children-number">Дети:</label>
+                  <button class="guests-number-controls decrease" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
+                  <input class="children-number" id="children-number" type="text" name="children-number" placeholder="1" value="1">
+                  <button class="guests-number-controls increase" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
+                </div>
+              </div>
+              <button class="search-button" type="submit">Найти</button>
+            </form>
+          </div>
+        </div>
       </section>
       <section class="subscribe">
         <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
@@ -142,7 +197,7 @@
       </section>
     </main>
     <footer class="site-footer">
-      <ul class="social">
+      <ul class="socials">
         <li class="social-item">
           <a class="social-network" href="https://facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook</span>
@@ -163,8 +218,9 @@
         </li>
       </ul>
       <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="author-link" href="https://htmlacademy.ru/">.html academy</a>
-      <svg class="author-icon"></svg>
+      <a class="author-link" href="https://htmlacademy.ru/">
+        <svg class="author-icon"></svg>
+      </a>
     </footer>
   </body>
 </html>

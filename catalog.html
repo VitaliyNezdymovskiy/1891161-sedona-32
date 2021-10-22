@@ -9,17 +9,17 @@
       <nav class="main-navigation">
         <ul class="main-menu">
           <li class="main-menu-item">
-            <a class="main-menu-limk" href="index.html">Главная</a>
+            <a class="main-menu-link" href="index.html">Главная</a>
           </li>
           <li class="main-menu-item">
-            <a class="main-menu-limk" href="#">О Седоне</a>
+            <a class="main-menu-link" href="#">О Седоне</a>
           </li>
           <li class="main-menu-item">
-            <a class="main-menu-limk" href="catalog.html">Гостиницы</a>
+            <a class="main-menu-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
-      <a class="logo" href="https://htmlacademy.ru/">
+      <a class="logo" href="index.html">
         <img class="logo-pic" src="#" alt="Логотип города Седона">
       </a>
       <ul class="user-controls">
@@ -32,46 +32,49 @@
         <li class="user-controls-item">
           <a class="favorite-control" href="#">
             <span class="visually-hidden">Избранное</span>
-            <span class="favorite-control-counter"></span>
+            <span class="favorite-control-counter">12</span>
             <svg class="favorite-control-icon"></svg>
           </a>
+          <div class="favorite-window">
+            <ul class="favorite-list">
+              <li class="favorite-item">
+                <img class="favorite-item-pic" src="#" alt="Мотель">
+                <div class="favorite-item-content">
+                  <p class="favorite-item-title">Desert Quail Inn</p>
+                  <span class="favorite-item-type">Мотель</span>
+                </div>
+                <button class="favorite-item-remove"></button>
+              </li>
+              <li class="favorite-item">
+                <img class="favorite-item-pic" src="#" alt="Апартаменты">
+                <div class="favorite-item-content">
+                  <p class="favorite-item-title">Villas at Poco Diablo</p>
+                  <span class="favorite-item-type">Апартаменты</span>
+                </div>
+                <button class="favorite-item-remove"></button>
+              </li>
+            </ul>
+            <a class="favorite-all" href="#">Все избранные</a>
+          </div>
+        </li>
+        <li class="desire-button">
+          <a class="button" href="catalog.html">Хочу сюда!</a>
         </li>
       </ul>
-      <div class="favorite-window">
-        <ul class="favorite-list">
-          <li class="favorite-item">
-            <img class="favorite-item-pic" src="#" alt="#">
-            <div class="favorite-item-content">
-              <p class="favorite-item-title"></p>
-              <span class="favorite-item-type"></span>
-            </div>
-            <button class="favorite-item-remove"></button>
-          </li>
-          <li class="favorite-item">
-            <img class="favorite-item-pic" src="#" alt="#">
-            <div class="favorite-item-content">
-              <p class="favorite-item-title"></p>
-              <span class="favorite-item-type"></span>
-            </div>
-            <button class="favorite-item-remove"></button>
-          </li>
-        </ul>
-        <a class="favorite-all" href="#"></a>
-      </div>
     </header>
     <main class="site-main">
       <header class="page-header">
         <h1 class="page-title">Гостиницы Седоны</h1>
-        <ul class="bredcrumbs">
-          <li class="bredcrumbs-item">
-            <a class="bredcrumbs-link" href="index.html"></a>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html"></a>
           </li>
-          <li class="bredcrumbs-item">
-            <p>Гостиницы</p>
+          <li class="breadcrumbs-item">
+            Гостиницы
           </li>
         </ul>
         <section class="catalog-products">
-          <h2 class="visually-hidden">Выбор гостиниц с помощью филтра</h2>
+          <h2 class="visually-hidden">Выбор гостиниц с помощью фильтра</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -79,21 +82,18 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
-                    <span class="control-mark"></span>
                     <span class="control-label">Бассейн</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="parking-space" checked>
-                    <span class="control-mark"></span>
                     <span class="control-label">Парковка</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
-                    <span class="control-mark"></span>
                     <span class="control-label">Wi-Fi</span>
                   </label>
                 </li>
@@ -105,21 +105,18 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="product-group" value="hotels" checked>
-                    <span class="control-mark"></span>
                     <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="product-group" value="motel">
-                    <span class="control-mark"></span>
                     <span class="control-label">Мотель</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="product-group" value="apartments">
-                    <span class="control-mark"></span>
                     <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
@@ -141,7 +138,7 @@
               </label>
             </fieldset>
             <button class="button" type="submit">Применить</button>
-            <button class="button" type="submit">Сбросить</button>
+            <button class="button" type="reset">Сбросить</button>
           </form>
         </section>
       </header>
@@ -149,16 +146,16 @@
         <div class="catalog-sorting">
           <p class="search-result">Найдено гостиниц: 38</p>
           <select class="sorting-options" id="sorting" name="sorting">
-            <option class="sorting">Сначала дешевые</option>
-            <option class="sorting">Сначала популярные</option>
-            <option class="sorting">Сначала дорогие</option>
+            <option class="sorting" value="Сначала дешевые" selected>Сначала дешевые</option>
+            <option class="sorting" value="Сначала популярные">Сначала популярные</option>
+            <option class="sorting" value="Сначала дорогие">Сначала дорогие</option>
           </select>
           <ul class="change-grid">
             <li class="change-grid-item">
               <!-- Разбор на следующей консультации -->
             </li>
           </ul>
-          <ul class="ctalog-list">
+          <ul class="catalog-list">
             <li class="catalog-item">
               <img class="catalog-item-pic" src="#" alt="Гостиница">
               <div class="catalog-item-content">
@@ -180,25 +177,28 @@
                   </li>
                 </ul>
               </div>
-              <div class="catalog-item-raitin">
-                <ul class="raiting-stars">
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+              <div class="catalog-item-raising">
+                <ul class="rating-stars">
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
                   </li>
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
                   </li>
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
                   </li>
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
+                  </li>
+                  <li>
+                    <p class="rating-assessment">Рейтинг: 8,5</p>
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
-          <ul class="ctalog-list">
+          <ul class="catalog-list">
             <li class="catalog-item">
               <img class="catalog-item-pic" src="#" alt="Мотель">
               <div class="catalog-item-content">
@@ -220,22 +220,25 @@
                   </li>
                 </ul>
               </div>
-              <div class="catalog-item-raitin">
-                <ul class="raiting-stars">
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+              <div class="catalog-item-raising">
+                <ul class="rating-stars">
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
                   </li>
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
                   </li>
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
+                  </li>
+                  <li>
+                    <p class="rating-assessment">Рейтинг: 8,9</p>
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
-          <ul class="ctalog-list">
+          <ul class="catalog-list">
             <li class="catalog-item">
               <img class="catalog-item-pic" src="#" alt="Апартаменты">
               <div class="catalog-item-content">
@@ -257,19 +260,22 @@
                   </li>
                 </ul>
               </div>
-              <div class="catalog-item-raitin">
-                <ul class="raiting-stars">
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+              <div class="catalog-item-raising">
+                <ul class="rating-stars">
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
                   </li>
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
+                  </li>
+                  <li>
+                    <p class="rating-assessment">Рейтинг: 9,2</p>
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
-          <ul class="ctalog-list">
+          <ul class="catalog-list">
             <li class="catalog-item">
               <img class="catalog-item-pic" src="#" alt="Гостиница">
               <div class="catalog-item-content">
@@ -291,13 +297,16 @@
                   </li>
                 </ul>
               </div>
-              <div class="catalog-item-raitin">
-                <ul class="raiting-stars">
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+              <div class="catalog-item-raising">
+                <ul class="rating-stars">
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
                   </li>
-                  <li class="raiting-star">
-                    <svg class="raiting-star-icon"></svg>
+                  <li class="rating-star">
+                    <svg class="rating-star-icon"></svg>
+                  </li>
+                  <li>
+                    <p class="rating-assessment">Рейтинг: 9,2</p>
                   </li>
                 </ul>
               </div>
@@ -326,11 +335,11 @@
               </li>
             </ul>
             <p class="pagination-counter">Гостиниц на странице:</p>
-            <select class="pagination-counter-options" name="select">
-              <option value="value1">1</option>
-              <option value="value1">2</option>
-              <option value="value1">3</option>
-              <option value="value2" selected>4</option>
+            <select class="pagination-counter-options" id="select" name="select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
             </select>
           </div>
         </div>
@@ -348,7 +357,7 @@
       </section>
     </main>
     <footer class="site-footer">
-      <ul class="social">
+      <ul class="socials">
         <li class="social-item">
           <a class="social-network" href="https://facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook</span>
