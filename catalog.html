@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="site-header">
@@ -20,7 +22,7 @@
         </ul>
       </nav>
       <a class="logo" href="index.html">
-        <img class="logo-pic" src="#" alt="Логотип города Седона">
+        <img class="logo-pic" src="img/icon--logo.svg" width="138" height="70" alt="Логотип города Седона">
       </a>
       <ul class="user-controls">
         <li class="user-controls-item">
@@ -38,7 +40,7 @@
           <div class="favorite-window">
             <ul class="favorite-list">
               <li class="favorite-item">
-                <img class="favorite-item-pic" src="#" alt="Мотель">
+                <img class="favorite-item-pic" src="img/pic--favouriteshotel1.png" width="48" height="48" alt="Мотель">
                 <div class="favorite-item-content">
                   <p class="favorite-item-title">Desert Quail Inn</p>
                   <span class="favorite-item-type">Мотель</span>
@@ -46,7 +48,7 @@
                 <button class="favorite-item-remove"></button>
               </li>
               <li class="favorite-item">
-                <img class="favorite-item-pic" src="#" alt="Апартаменты">
+                <img class="favorite-item-pic" src="img/pic--favouriteshotel2.png" width="48" height="48" alt="Апартаменты">
                 <div class="favorite-item-content">
                   <p class="favorite-item-title">Villas at Poco Diablo</p>
                   <span class="favorite-item-type">Апартаменты</span>
@@ -62,7 +64,7 @@
         </li>
       </ul>
     </header>
-    <main class="site-main">
+    <main class="site-main-catalog">
       <header class="page-header">
         <h1 class="page-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -128,17 +130,17 @@
                 <span class="visually-hidden">Изменить минимальную цену</span>
               </button>
               <button class="range-toggle toggle-min" type="button">
-                <span class="visually-hidden">Изменить минимальную цену</span>
+                <span class="visually-hidden">Изменить максимальную цену</span>
               </button>
-              <label class="catalog-filter-label">от
-                <input class="catalog-filter-input" type="number" name="min-price">
+              <label class="catalog-filter-label control-label">от
+                <input class="catalog-filter-input control-label" type="number" name="min-price" value="0">
               </label>
-              <label class="catalog-filter-label">до
-                <input class="catalog-filter-input" type="number" name="min-price">
+              <label class="catalog-filter-label control-label">до
+                <input class="catalog-filter-input control-label" type="number" name="min-price" value="9000">
               </label>
             </fieldset>
-            <button class="button" type="submit">Применить</button>
-            <button class="button" type="reset">Сбросить</button>
+            <button class="button-apply" type="submit">Применить</button>
+            <button class="button-reset control-label" type="reset">Сбросить</button>
           </form>
         </section>
       </header>
@@ -157,23 +159,23 @@
           </ul>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-item-pic" src="#" alt="Гостиница">
+              <img class="catalog-item-pic" src="img/content/pic--amara.jpg" width="180" height="120" alt="Гостиница">
               <div class="catalog-item-content">
                 <h2 class="catalog-item-title">Amara Resort & Spa</h2>
                 <ul class="catalog-item-detail">
                   <li class="catalog-item-detail-item">
-                    <p>Гостиница</p>
+                    <p class="catalog-item-text">Гостиница</p>
                   </li>
                   <li class="catalog-item-detail-item">
-                    <p>От 4000 ₽</p>
+                    <p class="catalog-item-text">От 4000 ₽</p>
                   </li>
                 </ul>
                 <ul class="catalog-item-controls">
                   <li class="catalog-item-controls-item">
-                    <a class="button">ПОДРОБНЕЕ</a>
+                    <a class="button-detail">ПОДРОБНЕЕ</a>
                   </li>
                   <li class="catalog-item-controls-item">
-                    <a class="button">В ИЗБРАННОЕ</a>
+                    <a class="button-favorites">В ИЗБРАННОЕ</a>
                   </li>
                 </ul>
               </div>
@@ -200,23 +202,23 @@
           </ul>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-item-pic" src="#" alt="Мотель">
+              <img class="catalog-item-pic" src="img/content/pic--desert.jpg" width="180" height="120" alt="Мотель">
               <div class="catalog-item-content">
                 <h2 class="catalog-item-title">Desert Quail Inn</h2>
                 <ul class="catalog-item-detail">
                   <li class="catalog-item-detail-item">
-                    <p>Мотель</p>
+                    <p class="catalog-item-text">Мотель</p>
                   </li>
                   <li class="catalog-item-detail-item">
-                    <p>От 3000 ₽</p>
+                    <p class="catalog-item-text">От 3000 ₽</p>
                   </li>
                 </ul>
                 <ul class="catalog-item-controls">
                   <li class="catalog-item-controls-item">
-                    <a class="button">ПОДРОБНЕЕ</a>
+                    <a class="button-detail">ПОДРОБНЕЕ</a>
                   </li>
                   <li class="catalog-item-controls-item">
-                    <a class="button">В ИЗБРАННОЕ</a>
+                    <a class="button-favorites">В ИЗБРАННОЕ</a>
                   </li>
                 </ul>
               </div>
@@ -240,23 +242,23 @@
           </ul>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-item-pic" src="#" alt="Апартаменты">
+              <img class="catalog-item-pic" src="img/content/pic--villas.jpg" width="180" height="120" alt="Апартаменты">
               <div class="catalog-item-content">
                 <h2 class="catalog-item-title">Villas at Poco Diablo</h2>
                 <ul class="catalog-item-detail">
                   <li class="catalog-item-detail-item">
-                    <p>Апартаменты</p>
+                    <p class="catalog-item-text">Апартаменты</p>
                   </li>
                   <li class="catalog-item-detail-item">
-                    <p>От 2000 ₽</p>
+                    <p class="catalog-item-text">От 2000 ₽</p>
                   </li>
                 </ul>
                 <ul class="catalog-item-controls">
                   <li class="catalog-item-controls-item">
-                    <a class="button">ПОДРОБНЕЕ</a>
+                    <a class="button-detail">ПОДРОБНЕЕ</a>
                   </li>
                   <li class="catalog-item-controls-item">
-                    <a class="button">В ИЗБРАННОЕ</a>
+                    <a class="button-favorites">В ИЗБРАННОМ</a>
                   </li>
                 </ul>
               </div>
@@ -277,23 +279,23 @@
           </ul>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-item-pic" src="#" alt="Гостиница">
+              <img class="catalog-item-pic" src="img/content/pic--greentree.jpg" width="180" height="120" alt="Гостиница">
               <div class="catalog-item-content">
                 <h2 class="catalog-item-title">GreenTree Inn</h2>
                 <ul class="catalog-item-detail">
                   <li class="catalog-item-detail-item">
-                    <p>Гостиница</p>
+                    <p class="catalog-item-text">Гостиница</p>
                   </li>
                   <li class="catalog-item-detail-item">
-                    <p>От 3000 ₽</p>
+                    <p class="catalog-item-text">От 3000 ₽</p>
                   </li>
                 </ul>
                 <ul class="catalog-item-controls">
                   <li class="catalog-item-controls-item">
-                    <a class="button">ПОДРОБНЕЕ</a>
+                    <a class="button-detail">ПОДРОБНЕЕ</a>
                   </li>
                   <li class="catalog-item-controls-item">
-                    <a class="button">В ИЗБРАННОЕ</a>
+                    <a class="button-favorites">В ИЗБРАННОЕ</a>
                   </li>
                 </ul>
               </div>
@@ -312,7 +314,7 @@
               </div>
             </li>
           </ul>
-          <button class="button">ЗАГРУЗИТЬ ЕЩЕ</button>
+          <button class="button-still">ЗАГРУЗИТЬ ЕЩЕ</button>
           <div class="pagination">
             <ul class="pagination-list">
               <li class="pagination-list-item">
@@ -334,17 +336,17 @@
                 <a class="pagination-list-link">10</a>
               </li>
             </ul>
-            <p class="pagination-counter">Гостиниц на странице:</p>
+            <p class="pagination-counter sorting">Гостиниц на странице:</p>
             <select class="pagination-counter-options" id="select" name="select">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4" selected>4</option>
+              <option class="sorting" value="1">1</option>
+              <option class="sorting" value="2">2</option>
+              <option class="sorting" value="3">3</option>
+              <option class="sorting" value="4" selected>4</option>
             </select>
           </div>
         </div>
       </section>
-      <section class="subscribe">
+      <section class="subscribe subscribe-catalog">
         <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="POST">
@@ -352,7 +354,7 @@
             <label class="visually-hidden" for="newsletter-email"></label>
             <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
           </p>
-          <button class="button-newsletter-button" type="submit">Подписаться</button>
+          <button class="button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -362,24 +364,25 @@
           <a class="social-network" href="https://facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook</span>
           </a>
-          <img src="#" alt="Facebook">
+          <img src="img/icon--facebook.svg" width="10" height="18" alt="Facebook">
         </li>
         <li class="social-item">
           <a class="social-network" href="https://twitter.com/htmiacademy_ru">
             <span class="visually-hidden">Twitter</span>
           </a>
-          <img src="#" alt="Twitter">
+          <img src="img/icon--twitter.svg" width="18" height="15" alt="Twitter">
         </li>
         <li class="social-item">
           <a class="social-network" href="https://youtube.com/c/HTMLAcademyRUS">
             <span class="visually-hidden">Youtube</span>
           </a>
-          <img src="#" alt="Youtube">
+          <img src="img/icon--youtube.svg" width="20" height="16" alt="Youtube">
         </li>
       </ul>
       <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="author-link" href="https://htmlacademy.ru/">.html academy</a>
-      <svg class="author-icon"></svg>
+      <a class="author-link" href="https://htmlacademy.ru/">
+        <svg class="author-icon"></svg>
+      </a>
     </footer>
   </body>
 </html>
