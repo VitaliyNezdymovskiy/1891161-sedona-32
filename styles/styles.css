@@ -299,10 +299,10 @@ body {
   text-decoration: none;
 }
 
-.site-main-index {
+.welcome {
   color: black;
-  background-color: white;
-  background-image: url("/img/pic--bg.jpg");
+  background-color: rgb(125, 145, 255);
+  background-image: url("../img/bg--mountains.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -318,7 +318,15 @@ body {
 .subscribe-index {
   color: black;
   background-color: white;
-  background-image: url("/img/pic--blurry.jpg");
+  background-image: url("../img/bg--blurry-index.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.page-header {
+  color: black;
+  background-color: rgb(125, 145, 255);
+  background-image: url("../img/bg--blurry-catalog.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
